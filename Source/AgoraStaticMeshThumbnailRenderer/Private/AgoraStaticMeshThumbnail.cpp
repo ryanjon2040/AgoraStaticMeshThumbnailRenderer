@@ -5,9 +5,9 @@
 #include "Engine/StaticMesh.h"
 #include "CanvasItem.h"
 
-void UAgoraStaticMeshThumbnail::Draw(UObject* Object, int32 X, int32 Y, uint32 Width, uint32 Height, FRenderTarget* RenderTarget, FCanvas* Canvas)
+void UAgoraStaticMeshThumbnail::Draw(UObject* Object, int32 X, int32 Y, uint32 Width, uint32 Height, FRenderTarget* RenderTarget, FCanvas* Canvas, bool bAdditionalViewFamily)
 {
-	Super::Draw(Object, X, Y, Width, Height, RenderTarget, Canvas);
+	Super::Draw(Object, X, Y, Width, Height, RenderTarget, Canvas, bAdditionalViewFamily);
 	
 	UStaticMesh* StaticMesh = Cast<UStaticMesh>(Object);
 	if (StaticMesh != nullptr && !StaticMesh->IsPendingKill())

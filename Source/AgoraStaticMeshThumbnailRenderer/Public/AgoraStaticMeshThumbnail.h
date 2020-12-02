@@ -13,7 +13,7 @@ class UAgoraStaticMeshThumbnail : public UStaticMeshThumbnailRenderer
 	GENERATED_BODY()
 	
 
-	virtual void Draw(UObject* Object, int32 X, int32 Y, uint32 Width, uint32 Height, FRenderTarget* RenderTarget, FCanvas* Canvas) override;
+	virtual void Draw(UObject* Object, int32 X, int32 Y, uint32 Width, uint32 Height, FRenderTarget* RenderTarget, FCanvas* Canvas, bool bAdditionalViewFamily) override;
 
 private:
 
