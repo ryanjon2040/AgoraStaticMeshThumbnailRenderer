@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Agora Static Mesh Thumbnail Renderer",
+	"Description": "An extended thumbnail rendering for Static Mesh assets in Content Browser which shows some information about the asset. By default shows the below information:\nVertices\nTriangles\nLODs\nMaterials",
+	"Category": "Satheesh",
+	"CreatedBy": "Satheesh",
+	"CreatedByURL": "https://www.patreon.com/ryanjon2040",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.24.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "AgoraStaticMeshThumbnailRenderer",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	]
+}
