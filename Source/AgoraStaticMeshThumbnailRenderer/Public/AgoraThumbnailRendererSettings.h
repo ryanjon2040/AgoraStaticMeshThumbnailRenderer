@@ -72,13 +72,13 @@ public:
 	virtual FName GetCategoryName() const override final { return TEXT("Agora"); }
 	virtual FText GetSectionText() const override final { return FText::FromString("Agora Thumbnail Renderer"); }
 
-	FORCEINLINE const bool IsEnabled() const { return bEnable; }
-	FORCEINLINE const bool ShowVertices() const { return bShowVertices; }
-	FORCEINLINE const bool ShowTriangles() const { return bShowTriangles; }
-	FORCEINLINE const bool ShowLODs() const { return bShowLODs; }
-	FORCEINLINE const bool ShowMaterials() const { return bShowMaterials; }
-	FORCEINLINE const FLinearColor GetTextColor() const { return TextColor; }
-	FORCEINLINE const float GetTextPadding() const { return TextPadding; }
+	FORCEINLINE const bool IsEnabled() const				{ return bEnable; }
+	FORCEINLINE const bool ShowVertices() const				{ return bShowVertices; }
+	FORCEINLINE const bool ShowTriangles() const			{ return bShowTriangles; }
+	FORCEINLINE const bool ShowLODs() const					{ return bShowLODs; }
+	FORCEINLINE const bool ShowMaterials() const			{ return bShowMaterials; }
+	FORCEINLINE const FLinearColor GetTextColor() const		{ return TextColor; }
+	FORCEINLINE const float GetTextPadding() const			{ return TextPadding; }
 	FORCEINLINE const class UFont* GetFont() const
 	{
 		if (GEngine)
