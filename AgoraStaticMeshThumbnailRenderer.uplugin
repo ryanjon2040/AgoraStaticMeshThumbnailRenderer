@@ -5,7 +5,7 @@
 	"FriendlyName": "Agora Static Mesh Thumbnail Renderer",
 	"Description": "An extended thumbnail rendering for Static Mesh assets in Content Browser which shows some information about the asset. By default shows the below information:\nVertices\nTriangles\nLODs\nMaterials",
 	"Category": "Satheesh",
-	"CreatedBy": "Satheesh",
+	"CreatedBy": "Satheesh (ryanjon2040)",
 	"CreatedByURL": "https://www.patreon.com/ryanjon2040",
 	"DocsURL": "",
 	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/dcfc9857e5f542028bd51083b28f4735",
