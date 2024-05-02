@@ -17,6 +17,6 @@ class UAgoraStaticMeshThumbnail : public UStaticMeshThumbnailRenderer
 
 private:
 
-	void Internal_DrawTextItem(UPARAM(ref) FCanvas*& Canvas, const FVector2D& AtLocation, const FString& InSuffix, const FString& InString);
+	void Internal_DrawTextItem(UPARAM(ref) FCanvas*& Canvas, const FVector2D& AtLocation, const FString& InSuffix, const FString& InString) const;
 
 };
