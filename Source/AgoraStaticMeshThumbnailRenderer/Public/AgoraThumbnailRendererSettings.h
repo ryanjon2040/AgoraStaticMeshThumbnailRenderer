@@ -3,20 +3,10 @@
 #pragma once
 
 #include "Engine/DeveloperSettings.h"
+#include "Fonts/SlateFontInfo.h"
 #include "AgoraThumbnailRendererSettings.generated.h"
 
 class UFont;
-
-UENUM(BlueprintType)
-enum class EAgoraThumbnailRendererFontType : uint8
-{
-	Tiny,
-	Small,
-	Medium,
-	Large,
-	Subtitle,
-	Custom
-};
 
 UCLASS(config = AgoraThumbnailRender, defaultconfig)
 class AGORASTATICMESHTHUMBNAILRENDERER_API UAgoraThumbnailRendererSettings : public UDeveloperSettings
@@ -48,10 +38,7 @@ private:
 	FLinearColor TextColor;
 
 	UPROPERTY(Config, EditAnywhere, Category = "Agora Thumbnail", meta = (EditCondition = "bEnable"))
-	EAgoraThumbnailRendererFontType FontType;
-
-	UPROPERTY(Config, EditAnywhere, Category = "Agora Thumbnail", meta = (EditCondition = "bEnable && FontType == EAgoraThumbnailRendererFontType::Custom"))
-	TSoftObjectPtr<UFont> CustomFont;
+	FSlateFontInfo Font;
 
 	UPROPERTY(Config, EditAnywhere, Category = "Agora Thumbnail", meta = (EditCondition = "bEnable"))
 	float TextPadding;
@@ -65,7 +52,7 @@ public:
 	virtual FName GetCategoryName() const override final { return TEXT("Agora"); }
 	virtual FText GetSectionText() const override final { return FText::FromString("Agora Thumbnail Renderer"); }
 
-	UFont* GetFont() const;
+	const FSlateFontInfo* GetFont() const { return &Font; }
 
 	FORCEINLINE const bool IsEnabled() const				{ return bEnable; }
 	FORCEINLINE const bool ShowVertices() const				{ return bShowVertices; }

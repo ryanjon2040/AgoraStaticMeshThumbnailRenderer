@@ -11,12 +11,11 @@ UCLASS(MinimalAPI)
 class UAgoraStaticMeshThumbnail : public UStaticMeshThumbnailRenderer
 {
 	GENERATED_BODY()
-	
 
+public:
 	virtual void Draw(UObject* Object, int32 X, int32 Y, uint32 Width, uint32 Height, FRenderTarget* RenderTarget, FCanvas* Canvas, bool bAdditionalViewFamily) override;
 
 private:
-
-	void Internal_DrawTextItem(UPARAM(ref) FCanvas*& Canvas, const FVector2D& AtLocation, const FString& InSuffix, const FString& InString) const;
+	static void Internal_DrawTextItem(FCanvas* Canvas, const FVector2D& AtLocation, const FString& InSuffix, const FString& InString);
 
 };

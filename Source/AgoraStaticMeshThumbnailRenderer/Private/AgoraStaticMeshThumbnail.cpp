@@ -5,6 +5,8 @@
 #include "Engine/StaticMesh.h"
 #include "CanvasItem.h"
 #include "AgoraThumbnailRendererSettings.h"
+#include "CanvasTypes.h"
+#include "StaticMeshResources.h"
 #include "PhysicsEngine/BodySetup.h"
 
 void UAgoraStaticMeshThumbnail::Draw(UObject* Object, int32 X, int32 Y, uint32 Width, uint32 Height, FRenderTarget* RenderTarget, FCanvas* Canvas, bool bAdditionalViewFamily)
@@ -60,12 +62,12 @@ void UAgoraStaticMeshThumbnail::Draw(UObject* Object, int32 X, int32 Y, uint32 W
 	}
 }
 
-void UAgoraStaticMeshThumbnail::Internal_DrawTextItem(FCanvas*& Canvas, const FVector2D& AtLocation, const FString& InSuffix, const FString& InString) const
+void UAgoraStaticMeshThumbnail::Internal_DrawTextItem(FCanvas* Canvas, const FVector2D& AtLocation, const FString& InSuffix, const FString& InString)
 {
-	if (const UFont* Font = UAgoraThumbnailRendererSettings::Get()->GetFont())
+	if (const auto Font = UAgoraThumbnailRendererSettings::Get()->GetFont())
 	{
 		const FString TextMessage = InSuffix.IsEmpty() ? InString : FString::Printf(TEXT("%s: %s"), *InSuffix, *InString);
-		FCanvasTextItem TextItem(AtLocation, FText::FromString(TextMessage), Font, UAgoraThumbnailRendererSettings::Get()->GetTextColor());
-		TextItem.Draw(Canvas);
+		FCanvasTextItem TextItem(AtLocation, FText::FromString(TextMessage), *Font, UAgoraThumbnailRendererSettings::Get()->GetTextColor());
+		Canvas->DrawItem(TextItem, AtLocation);
 	}
 }
