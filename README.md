@@ -2,7 +2,7 @@
 
 [<img src="https://img.shields.io/website?label=Become%20a%20&up_message=Patron&url=https%3A%2F%2Fwww.patreon.com%2Fryanjon2040">](http://patreon.com/ryanjon2040)
 
-[![Support Server](https://img.shields.io/discord/613390075816050698.svg?color=7289da&label=Agora&logo=discord&style=flat-square)](https://discord.gg/MuppGr9eh7) [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/mindfreak2040%40gmail.com)
+[![Support Server](https://img.shields.io/discord/613390075816050698.svg?color=7289da&label=Agora&logo=discord&style=flat-square)](https://discord.gg/MuppGr9eh7) [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/mindfreak2040)
 
 [![HitCount](http://hits.dwyl.com/ryanjon2040/AgoraStaticMeshThumbnailRenderer.svg)](http://hits.dwyl.com/ryanjon2040/AgoraStaticMeshThumbnailRenderer) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ryanjon2040/AgoraStaticMeshThumbnailRenderer/pulls) ![GitHub](https://img.shields.io/github/license/ryanjon2040/AgoraStaticMeshThumbnailRenderer?label=License) [<img src="https://img.shields.io/twitter/follow/ryanjon2040?style=social">](http://twitter.com/ryanjon2040)
 
