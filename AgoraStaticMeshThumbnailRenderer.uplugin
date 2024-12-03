@@ -8,15 +8,14 @@
 	"CreatedBy": "Satheesh (ryanjon2040)",
 	"CreatedByURL": "https://www.patreon.com/ryanjon2040",
 	"DocsURL": "",
-	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/dcfc9857e5f542028bd51083b28f4735",
+	"FabURL": "com.epicgames.launcher://ue/Fab/product/0e5a4892-2a93-4244-9b97-52a79110abd9",
 	"SupportURL": "https://discord.gg/MuppGr9eh7",
 	"CanContainContent": false,
-	"Installed": true,
 	"Modules": [
 		{
 			"Name": "AgoraStaticMeshThumbnailRenderer",
 			"Type": "Editor",
-			"LoadingPhase": "Default",
+			"LoadingPhase": "PostEngineInit",
 			"PlatformAllowList": [
 				"Win64",
 				"Linux",
