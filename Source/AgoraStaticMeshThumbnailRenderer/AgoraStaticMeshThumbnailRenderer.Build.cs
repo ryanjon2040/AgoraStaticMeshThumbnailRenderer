@@ -1,5 +1,6 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
+using System;
 using UnrealBuildTool;
 
 public class AgoraStaticMeshThumbnailRenderer : ModuleRules
@@ -8,37 +9,23 @@ public class AgoraStaticMeshThumbnailRenderer : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
-		PublicIncludePaths.AddRange(
-			new string[] {
-				// ... add public include paths required here ...
-			}
-			);
-				
+		CppStandard = CppStandardVersion.EngineDefault;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		
-		PrivateIncludePaths.AddRange(
-			new string[] {
-				// ... add other private include paths required here ...
-			}
-			);
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", 
+			"DeveloperSettings", 
+			"UnrealEd",
+			"Slate",
+			"SlateCore"
+		});
+		
+		if (Environment.GetEnvironmentVariable("YETI_STRICT_BUILD") == "true")
+		{
+			bUseUnity = false;
+			PCHUsage = PCHUsageMode.NoPCHs;
 			
-		
-		PublicDependencyModuleNames.AddRange(
-			new string[]
-			{
-				"Core",
-				"CoreUObject",
-				"Engine",
-				"DeveloperSettings",
-				"UnrealEd"
-			}
-			);
-		
-		
-		DynamicallyLoadedModuleNames.AddRange(
-			new string[]
-			{
-				// ... add any modules that your module loads dynamically here ...
-			}
-			);
+			Console.WriteLine($"{ToString()} is using STRICT build.");
+		}
 	}
 }
